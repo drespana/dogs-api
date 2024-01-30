@@ -36,7 +36,7 @@ app.delete('/dogs/:id', async (req, res, next) => {
 app.get('/dogs', async (req, res, next) => {
   try {
     const where = {};
-    for(const key of ['name', 'description', 'breed', 'color']) {
+    for(const key of ['name', 'description', 'breed', 'color', 'id']) {
       if(req.query[key]) {
         where[key] =  {
           [Op.like]: `%${req.query[key]}%` // search within the string, not only exact matches
@@ -52,5 +52,7 @@ app.get('/dogs', async (req, res, next) => {
     next(error)
   }
 });
+
+
 
 module.exports = app;

@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "node db/seed.js",
     "start": "node index.js",
-    "start-dev": "nodemon index.js",
+    "start-dev": "nodemon server.js",
     "test": "jest --watch-all"
   },
   "keywords": [],
@@ -20,6 +20,6 @@
     "supertest": "6.2.3"
   },
   "devDependencies": {
-    "nodemon": "2.0.16"
+    "nodemon": "^2.0.16"
   }
 }
